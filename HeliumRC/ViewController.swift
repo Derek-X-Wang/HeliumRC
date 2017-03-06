@@ -22,6 +22,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var ssidInput: UITextField!
     @IBOutlet weak var psdInput: UITextField!
     
+    let setupServerAddress = "192.168.10.1"
+    let setupServerPort = 8002
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -123,7 +126,7 @@ class ViewController: UIViewController {
         toast("turning off wifi...")
     }
     @IBAction func connectLocalWiFi(_ sender: Any) {
-        let client = TCPClient(address: "192.168.10.1", port: 8002)
+        let client = TCPClient(address: setupServerAddress, port: Int32(setupServerPort))
         switch client.connect(timeout: 10) {
         case .success:
             print("Connected")
@@ -143,6 +146,26 @@ class ViewController: UIViewController {
             print(error)
         }
         toast("connecting local wifi...")
+    }
+    @IBAction func startMqttClient(_ sender: Any) {
+        let client = TCPClient(address: setupServerAddress, port: Int32(setupServerPort))
+        switch client.connect(timeout: 10) {
+        case .success:
+            print("Connected")
+            let cmd = "mqtt:connect"
+            print("Mqtt is "+cmd)
+            switch client.send(string: cmd ) {
+            case .success:
+                print("Successfully sent")
+                client.close();
+            case .failure(let error):
+                print(error)
+                client.close();
+            }
+        case .failure(let error):
+            print(error)
+        }
+        toast("Starting mqtt client...")
     }
 
 }
