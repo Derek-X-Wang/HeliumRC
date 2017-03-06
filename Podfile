@@ -7,6 +7,9 @@ target 'HeliumRC' do
 
   # Pods for HeliumRC
   pod 'Alamofire', '~> 4.0'
+  pod 'SwiftMessages'
+  pod 'SwiftSocket'
+  pod 'IQKeyboardManagerSwift'
 
   target 'HeliumRCTests' do
     inherit! :search_paths

@@ -8,6 +8,8 @@
 
 import UIKit
 import Alamofire
+import SwiftMessages
+import SwiftSocket
 
 class ViewController: UIViewController {
 
@@ -23,11 +25,37 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        //Looks for single or multiple taps.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+        
+        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+        //tap.cancelsTouchesInView = false
+        
+        view.addGestureRecognizer(tap)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
+    func toast(_ msg: String) {
+        let warning = MessageView.viewFromNib(layout: .CardView)
+        warning.configureTheme(.warning)
+        warning.configureDropShadow()
+        
+        let iconText = ["🤔", "😳", "🙄", "😶"].sm_random()!
+        warning.configureContent(title: "Sent", body: msg, iconText: iconText)
+        warning.button?.isHidden = true
+        var warningConfig = SwiftMessages.defaultConfig
+        warningConfig.presentationContext = .window(windowLevel: UIWindowLevelStatusBar)
+        SwiftMessages.show(config: warningConfig, view: warning)
     }
 
     @IBAction func toggleLed1(_ sender: UISwitch) {
@@ -53,18 +81,68 @@ class ViewController: UIViewController {
             "isOn": on,
             "ledId": id
         ]
-        Alamofire.request("https://projecthelium-cloud.herokuapp.com/api/rc", method: .post, parameters: parameters, encoding: JSONEncoding.default)
-        print("send");
+        let data = Alamofire.request("https://projecthelium-cloud.herokuapp.com/api/rc", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+        print("send 1 " + data.description)
+    
     }
     
 
     @IBAction func setExtendedNetwork(_ sender: Any) {
+        
+        let parameters: Parameters = [
+            "code": 2,
+            "id": "base",
+            "wifioption": 0,
+            "essid": ssidInput.text ?? "ssid",
+            "epsd": psdInput.text ?? "psd"
+        ]
+        let data = Alamofire.request("https://projecthelium-cloud.herokuapp.com/api/rc", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+        print("send 2:0 " + data.description)
+        toast("configuring extended nerwork...")
     }
     @IBAction func enableWiFi(_ sender: Any) {
+        let parameters: Parameters = [
+            "code": 2,
+            "id": "base",
+            "wifioption": 1,
+            "isExtenderOn": true
+        ]
+        let data = Alamofire.request("https://projecthelium-cloud.herokuapp.com/api/rc", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+        print("send 2:1:1 " + data.description)
+        toast("turning on wifi...")
     }
     @IBAction func disableWiFi(_ sender: Any) {
+        let parameters: Parameters = [
+            "code": 2,
+            "id": "base",
+            "wifioption": 1,
+            "isExtenderOn": false
+        ]
+        let data = Alamofire.request("https://projecthelium-cloud.herokuapp.com/api/rc", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+        print("send 2:1:0 " + data.description)
+        toast("turning off wifi...")
     }
     @IBAction func connectLocalWiFi(_ sender: Any) {
+        let client = TCPClient(address: "192.168.10.1", port: 8002)
+        switch client.connect(timeout: 10) {
+        case .success:
+            print("Connected")
+            let ssid = ssidInput.text
+            let psd = psdInput.text
+            let wifiData = "wifi:connect:" + ssid! + ":" + psd!
+            print("Local wifi is "+wifiData)
+            switch client.send(string: wifiData ) {
+            case .success:
+                print("Successfully sent")
+                client.close();
+            case .failure(let error):
+                print(error)
+                client.close();
+            }
+        case .failure(let error):
+            print(error)
+        }
+        toast("connecting local wifi...")
     }
 
 }
