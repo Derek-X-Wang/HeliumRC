@@ -22,6 +22,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var ssidInput: UITextField!
     @IBOutlet weak var psdInput: UITextField!
     
+    let debug = true;
+    let devHost = "http://192.168.0.12:3000/api/v1"
     let setupServerAddress = "192.168.10.1"
     let setupServerPort = 8002
     
@@ -60,6 +62,13 @@ class ViewController: UIViewController {
         warningConfig.presentationContext = .window(windowLevel: UIWindowLevelStatusBar)
         SwiftMessages.show(config: warningConfig, view: warning)
     }
+    
+    func fireRequest(_ parameters: Parameters) {
+        let address = (debug == true) ? devHost : "https://projecthelium-cloud.herokuapp.com/api/v1"
+        let data = Alamofire.request(address, method: .post, parameters: parameters, encoding: JSONEncoding.default)
+        print("send " + data.description)
+        
+    }
 
     @IBAction func toggleLed1(_ sender: UISwitch) {
         controlLeds(1, sender.isOn)
@@ -79,50 +88,45 @@ class ViewController: UIViewController {
     
     func controlLeds(_ id:Int, _ on:Bool) {
         let parameters: Parameters = [
-            "code": 1,
+            "action": 1,
             "id": "base",
             "isOn": on,
-            "ledId": id
+            "option": id
         ]
-        let data = Alamofire.request("https://projecthelium-cloud.herokuapp.com/api/rc", method: .post, parameters: parameters, encoding: JSONEncoding.default)
-        print("send 1 " + data.description)
-    
+        fireRequest(parameters)
     }
     
 
     @IBAction func setExtendedNetwork(_ sender: Any) {
         
         let parameters: Parameters = [
-            "code": 2,
+            "action": 2,
             "id": "base",
-            "wifioption": 0,
+            "option": 0,
             "essid": ssidInput.text ?? "ssid",
             "epsd": psdInput.text ?? "psd"
         ]
-        let data = Alamofire.request("https://projecthelium-cloud.herokuapp.com/api/rc", method: .post, parameters: parameters, encoding: JSONEncoding.default)
-        print("send 2:0 " + data.description)
+        fireRequest(parameters)
         toast("configuring extended nerwork...")
     }
     @IBAction func enableWiFi(_ sender: Any) {
         let parameters: Parameters = [
-            "code": 2,
+            "action": 2,
             "id": "base",
-            "wifioption": 1,
-            "isExtenderOn": true
+            "option": 1,
+            "isOn": true
         ]
-        let data = Alamofire.request("https://projecthelium-cloud.herokuapp.com/api/rc", method: .post, parameters: parameters, encoding: JSONEncoding.default)
-        print("send 2:1:1 " + data.description)
+        fireRequest(parameters)
         toast("turning on wifi...")
     }
     @IBAction func disableWiFi(_ sender: Any) {
         let parameters: Parameters = [
-            "code": 2,
+            "action": 2,
             "id": "base",
-            "wifioption": 1,
-            "isExtenderOn": false
+            "option": 1,
+            "isOn": false
         ]
-        let data = Alamofire.request("https://projecthelium-cloud.herokuapp.com/api/rc", method: .post, parameters: parameters, encoding: JSONEncoding.default)
-        print("send 2:1:0 " + data.description)
+        fireRequest(parameters)
         toast("turning off wifi...")
     }
     @IBAction func connectLocalWiFi(_ sender: Any) {
