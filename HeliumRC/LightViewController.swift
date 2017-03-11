@@ -11,7 +11,7 @@ import Alamofire
 import SwiftMessages
 import SwiftSocket
 
-class ViewController: UIViewController {
+class LightViewController: UIViewController {
 
     @IBOutlet weak var led1Switch: UISwitch!
     @IBOutlet weak var led2Switch: UISwitch!
@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var ssidInput: UITextField!
     @IBOutlet weak var psdInput: UITextField!
     
-    let debug = true;
+    let debug = false;
     let devHost = "http://192.168.0.12:3000/api/v1"
     let setupServerAddress = "192.168.10.1"
     let setupServerPort = 8002
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         //Looks for single or multiple taps.
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LightViewController.dismissKeyboard))
         
         //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
         //tap.cancelsTouchesInView = false

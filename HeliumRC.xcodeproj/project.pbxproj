@@ -10,12 +10,15 @@
 		4B0BA40F9F9D0ED379C4A7E0 /* Pods_HeliumRC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCBAFD5A480AB9D4CD5CBE4B /* Pods_HeliumRC.framework */; };
 		4C7E7158C052FFC20633A433 /* Pods_HeliumRCTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47606FD742AB50AF4C14D2EA /* Pods_HeliumRCTests.framework */; };
 		581D50E21E1B746F004BEBF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581D50E11E1B746F004BEBF2 /* AppDelegate.swift */; };
-		581D50E41E1B746F004BEBF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581D50E31E1B746F004BEBF2 /* ViewController.swift */; };
+		581D50E41E1B746F004BEBF2 /* LightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581D50E31E1B746F004BEBF2 /* LightViewController.swift */; };
 		581D50E71E1B746F004BEBF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 581D50E51E1B746F004BEBF2 /* Main.storyboard */; };
 		581D50E91E1B746F004BEBF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 581D50E81E1B746F004BEBF2 /* Assets.xcassets */; };
 		581D50EC1E1B746F004BEBF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 581D50EA1E1B746F004BEBF2 /* LaunchScreen.storyboard */; };
 		581D50F71E1B746F004BEBF2 /* HeliumRCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581D50F61E1B746F004BEBF2 /* HeliumRCTests.swift */; };
 		581D51021E1B746F004BEBF2 /* HeliumRCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581D51011E1B746F004BEBF2 /* HeliumRCUITests.swift */; };
+		586E422D1E74076F00C82425 /* WifiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586E422C1E74076F00C82425 /* WifiViewController.swift */; };
+		586E422F1E741BEC00C82425 /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586E422E1E741BEC00C82425 /* EmptyViewController.swift */; };
+		586E42311E741C7C00C82425 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586E42301E741C7C00C82425 /* SettingViewController.swift */; };
 		E41D4B88D2A57F2E1C668F9D /* Pods_HeliumRCUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CF7201AEEA30AE0499A21A /* Pods_HeliumRCUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +45,7 @@
 		47606FD742AB50AF4C14D2EA /* Pods_HeliumRCTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeliumRCTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		581D50DE1E1B746F004BEBF2 /* HeliumRC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeliumRC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		581D50E11E1B746F004BEBF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		581D50E31E1B746F004BEBF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		581D50E31E1B746F004BEBF2 /* LightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightViewController.swift; sourceTree = "<group>"; };
 		581D50E61E1B746F004BEBF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		581D50E81E1B746F004BEBF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		581D50EB1E1B746F004BEBF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +57,9 @@
 		581D51011E1B746F004BEBF2 /* HeliumRCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeliumRCUITests.swift; sourceTree = "<group>"; };
 		581D51031E1B746F004BEBF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		585B2692E4156DD3E2A6E7C1 /* Pods-HeliumRCUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeliumRCUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeliumRCUITests/Pods-HeliumRCUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		586E422C1E74076F00C82425 /* WifiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WifiViewController.swift; sourceTree = "<group>"; };
+		586E422E1E741BEC00C82425 /* EmptyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
+		586E42301E741C7C00C82425 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		989D1B2DF784B14DFC5DFDCA /* Pods-HeliumRCTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeliumRCTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeliumRCTests/Pods-HeliumRCTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A4FB86553B40537EFD0F0F05 /* Pods-HeliumRCUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeliumRCUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HeliumRCUITests/Pods-HeliumRCUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BAB2451E56A3B4D8A6964DC1 /* Pods-HeliumRCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeliumRCTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HeliumRCTests/Pods-HeliumRCTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,11 +121,14 @@
 			isa = PBXGroup;
 			children = (
 				581D50E11E1B746F004BEBF2 /* AppDelegate.swift */,
-				581D50E31E1B746F004BEBF2 /* ViewController.swift */,
+				581D50E31E1B746F004BEBF2 /* LightViewController.swift */,
 				581D50E51E1B746F004BEBF2 /* Main.storyboard */,
 				581D50E81E1B746F004BEBF2 /* Assets.xcassets */,
 				581D50EA1E1B746F004BEBF2 /* LaunchScreen.storyboard */,
 				581D50ED1E1B746F004BEBF2 /* Info.plist */,
+				586E422C1E74076F00C82425 /* WifiViewController.swift */,
+				586E422E1E741BEC00C82425 /* EmptyViewController.swift */,
+				586E42301E741C7C00C82425 /* SettingViewController.swift */,
 			);
 			path = HeliumRC;
 			sourceTree = "<group>";
@@ -447,7 +456,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				581D50E41E1B746F004BEBF2 /* ViewController.swift in Sources */,
+				586E42311E741C7C00C82425 /* SettingViewController.swift in Sources */,
+				581D50E41E1B746F004BEBF2 /* LightViewController.swift in Sources */,
+				586E422D1E74076F00C82425 /* WifiViewController.swift in Sources */,
+				586E422F1E741BEC00C82425 /* EmptyViewController.swift in Sources */,
 				581D50E21E1B746F004BEBF2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

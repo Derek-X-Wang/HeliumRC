@@ -10,6 +10,7 @@ target 'HeliumRC' do
   pod 'SwiftMessages'
   pod 'SwiftSocket'
   pod 'IQKeyboardManagerSwift'
+  pod 'FoldingTabBar', '~> 1.1'
 
   target 'HeliumRCTests' do
     inherit! :search_paths
