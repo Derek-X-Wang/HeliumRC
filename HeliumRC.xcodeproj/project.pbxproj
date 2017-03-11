@@ -19,6 +19,8 @@
 		586E422D1E74076F00C82425 /* WifiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586E422C1E74076F00C82425 /* WifiViewController.swift */; };
 		586E422F1E741BEC00C82425 /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586E422E1E741BEC00C82425 /* EmptyViewController.swift */; };
 		586E42311E741C7C00C82425 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586E42301E741C7C00C82425 /* SettingViewController.swift */; };
+		586E42331E7423CC00C82425 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586E42321E7423CC00C82425 /* constants.swift */; };
+		586E42351E7423F700C82425 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586E42341E7423F700C82425 /* utils.swift */; };
 		E41D4B88D2A57F2E1C668F9D /* Pods_HeliumRCUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CF7201AEEA30AE0499A21A /* Pods_HeliumRCUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,8 @@
 		586E422C1E74076F00C82425 /* WifiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WifiViewController.swift; sourceTree = "<group>"; };
 		586E422E1E741BEC00C82425 /* EmptyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
 		586E42301E741C7C00C82425 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		586E42321E7423CC00C82425 /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		586E42341E7423F700C82425 /* utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
 		989D1B2DF784B14DFC5DFDCA /* Pods-HeliumRCTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeliumRCTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeliumRCTests/Pods-HeliumRCTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A4FB86553B40537EFD0F0F05 /* Pods-HeliumRCUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeliumRCUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HeliumRCUITests/Pods-HeliumRCUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BAB2451E56A3B4D8A6964DC1 /* Pods-HeliumRCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeliumRCTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HeliumRCTests/Pods-HeliumRCTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,13 +126,15 @@
 			children = (
 				581D50E11E1B746F004BEBF2 /* AppDelegate.swift */,
 				581D50E31E1B746F004BEBF2 /* LightViewController.swift */,
-				581D50E51E1B746F004BEBF2 /* Main.storyboard */,
+				586E422C1E74076F00C82425 /* WifiViewController.swift */,
+				586E42301E741C7C00C82425 /* SettingViewController.swift */,
+				586E422E1E741BEC00C82425 /* EmptyViewController.swift */,
 				581D50E81E1B746F004BEBF2 /* Assets.xcassets */,
+				581D50E51E1B746F004BEBF2 /* Main.storyboard */,
 				581D50EA1E1B746F004BEBF2 /* LaunchScreen.storyboard */,
 				581D50ED1E1B746F004BEBF2 /* Info.plist */,
-				586E422C1E74076F00C82425 /* WifiViewController.swift */,
-				586E422E1E741BEC00C82425 /* EmptyViewController.swift */,
-				586E42301E741C7C00C82425 /* SettingViewController.swift */,
+				586E42321E7423CC00C82425 /* constants.swift */,
+				586E42341E7423F700C82425 /* utils.swift */,
 			);
 			path = HeliumRC;
 			sourceTree = "<group>";
@@ -459,8 +465,10 @@
 				586E42311E741C7C00C82425 /* SettingViewController.swift in Sources */,
 				581D50E41E1B746F004BEBF2 /* LightViewController.swift in Sources */,
 				586E422D1E74076F00C82425 /* WifiViewController.swift in Sources */,
+				586E42351E7423F700C82425 /* utils.swift in Sources */,
 				586E422F1E741BEC00C82425 /* EmptyViewController.swift in Sources */,
 				581D50E21E1B746F004BEBF2 /* AppDelegate.swift in Sources */,
+				586E42331E7423CC00C82425 /* constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

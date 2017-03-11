@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+let debug = false;
+let devHost = "http://192.168.0.12:3000/api/v1"
+let setupServerAddress = "192.168.10.1"
+let setupServerPort = 8002
