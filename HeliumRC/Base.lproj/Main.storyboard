@@ -126,67 +126,6 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tgu-my-YoV">
-                                <rect key="frame" x="67" y="356" width="240" height="233"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ssid" borderStyle="roundedRect" placeholder="ssid" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dsH-tQ-oYV">
-                                        <rect key="frame" x="8" y="17" width="232" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="psd" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zBR-jj-qVi">
-                                        <rect key="frame" x="8" y="55" width="232" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGy-xv-t6a">
-                                        <rect key="frame" x="8" y="93" width="232" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Set Extended Network"/>
-                                        <connections>
-                                            <action selector="setExtendedNetwork:" destination="BYZ-38-t0r" eventType="touchUpInside" id="238-4n-Efw"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FwZ-rY-WyU">
-                                        <rect key="frame" x="8" y="127" width="116" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Enable WiFi"/>
-                                        <connections>
-                                            <action selector="enableWiFi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6QT-Ul-7y5"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSg-Sg-Gkv">
-                                        <rect key="frame" x="64" y="165" width="121" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Connect Network"/>
-                                        <connections>
-                                            <action selector="connectLocalWiFi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a1A-9v-as8"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5V-c0-lpT">
-                                        <rect key="frame" x="116" y="127" width="116" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Disable WiFi"/>
-                                        <connections>
-                                            <action selector="disableWiFi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="df6-jf-EJ6"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqj-Sd-pJ3">
-                                        <rect key="frame" x="66" y="203" width="116" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Start Mqtt Client"/>
-                                        <connections>
-                                            <action selector="startMqttClient:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zRd-7x-HLX"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.67834964602198422" green="0.44718953249389293" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -197,8 +136,6 @@
                         <outlet property="led3Switch" destination="0C8-e5-hZD" id="rk2-P9-yLp"/>
                         <outlet property="led4Switch" destination="pMT-Yu-aeJ" id="i9X-qv-Aru"/>
                         <outlet property="led5Switch" destination="2Rb-Ok-zB1" id="Rp7-HX-xUd"/>
-                        <outlet property="psdInput" destination="zBR-jj-qVi" id="6iw-kk-TYD"/>
-                        <outlet property="ssidInput" destination="dsH-tQ-oYV" id="NYI-TD-B8m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -258,26 +195,41 @@
                                         <rect key="frame" x="8" y="93" width="232" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Set Extended Network"/>
+                                        <connections>
+                                            <action selector="setExtendedNetwork:" destination="2Sd-30-ZaS" eventType="touchUpInside" id="aWm-97-Lqs"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXG-lm-DFP">
                                         <rect key="frame" x="8" y="127" width="116" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Enable WiFi"/>
+                                        <connections>
+                                            <action selector="enableWiFi:" destination="2Sd-30-ZaS" eventType="touchUpInside" id="gAH-1h-tFa"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7K-dH-JCS">
                                         <rect key="frame" x="64" y="165" width="121" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Connect Network"/>
+                                        <connections>
+                                            <action selector="connectLocalWiFi:" destination="2Sd-30-ZaS" eventType="touchUpInside" id="zbJ-mM-3D2"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9S-tf-rdL">
                                         <rect key="frame" x="116" y="127" width="116" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Disable WiFi"/>
+                                        <connections>
+                                            <action selector="disableWiFi:" destination="2Sd-30-ZaS" eventType="touchUpInside" id="3zx-EN-ixW"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBx-RP-Aus">
                                         <rect key="frame" x="66" y="203" width="116" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Start Mqtt Client"/>
+                                        <connections>
+                                            <action selector="startMqttClient:" destination="2Sd-30-ZaS" eventType="touchUpInside" id="X4k-1c-HK9"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -286,6 +238,10 @@
                         <color key="backgroundColor" red="0.2235177019" green="0.75200199160000003" blue="0.79183493949999995" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="xqT-vT-XqJ"/>
+                    <connections>
+                        <outlet property="psdInput" destination="UYZ-r4-clL" id="xzj-CA-4pb"/>
+                        <outlet property="ssidInput" destination="9AY-5n-cg8" id="ppx-kt-Z5H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ara-W8-l3e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
